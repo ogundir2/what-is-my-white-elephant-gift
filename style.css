@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto';
+    background-color: rgb(244,242,238);
+}
+
+body {
+    height: 100vh;
+    width: 100vh;
+}
+
+nav {
+    height: 6vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    border-bottom: solid rgba(140,140,140,0.2) 0.1rem;
+    background-color: white;
+}
+
+nav a {
+    color: gray;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#header-section {
+    height: 22vh;
+    width: 100vw;
+    border-bottom: solid rgba(140,140,140,0.2) 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+
+#header-section h1 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+#header-section h3 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+#form-section {
+    width: 100vw;
+    height: 72vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.intent-form {
+    display: none;
+    margin-top: 2.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: solid rgba(140,140,140,0.2) 0.1rem;
+    max-width: 50rem;
+}
+ 
+
+#intent-form-1 {
+    display: block;
+}
+
+.form-div-1 {
+    padding: 2.2rem;
+}
+
+.form-div-1 h2 {
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+
+.form-div-1 h4 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+.form-div-1 h5 {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: rgb(203, 17, 45);
+    display: none;
+}
+
+.form-div-1 div {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+    border: 0.1rem;
+}
+
+.form-div-1 div p {
+    margin-left: 2rem;
+}
+
+.form-div-2 {
+    border-top: solid rgba(140,140,140,0.2) 0.1rem;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.next-button {
+    padding: 0.8rem;
+    width: 6.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgba(140,140,140,0.2);
+    border: none;
+    color: rgba(0, 0, 0, 0.3);
+    margin-left: 1rem;
+}
+
+.next-button-active {
+    background-color: rgb(10,102,194);
+    color: white;
+}
+
+.next-button-active:hover {
+    cursor: pointer;
+}
+
+.back-button {
+    padding: 0.8rem;
+    width: 6.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: white;
+    border: rgb(10,102,194) solid 0.1rem;
+    color: rgb(10,102,194);
+}
+
+.back-button:hover {
+    cursor: pointer;
+}
+
+
+/* PUZZLE */
+#puzzle-body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#puzzle-header-section {
+    height: 10vh;
+    width: 100vw;
+    border-bottom: solid rgba(140,140,140,0.2) 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+
+#puzzle-body h1{
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+#puzzle {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#puzzle button {
+    padding: 0.8rem;
+    width: 15rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: white;
+    border: rgb(10,102,194) solid 0.1rem;
+    color: rgb(10,102,194);
+    margin-top: 1rem;
+}
+
+#puzzle button:hover {
+    cursor: pointer;
+}
+
+.puzzle-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.puzzle-div h4 {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.puzzle-div input {
+    width: 15rem;
+    margin: 0.8rem;
+    padding: 0.4rem;
+    font-size: 1.4rem;
+    outline: none;
+    border: black solid 0.1rem;
+    border-radius: 0.3rem;
+}
+
+#puzzle h5 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(203, 17, 45);
+    display: none;
+}
+
+/* Button */
+
+#reveal-gift-button {
+    padding: 0.8rem;
+    width: 15rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(10,102,194);
+    color: white;
+    border: rgb(10,102,194) solid 0.1rem;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+#reveal-gift-button:focus {
+    border: white solid 0.5rem;
+}
