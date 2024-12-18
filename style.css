@@ -260,3 +260,50 @@ input[type=checkbox] {
 #reveal-gift-button:focus {
     border: white solid 0.5rem;
 }
+
+/* Gift */
+
+#gift-body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gift {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gift h2 {
+    margin: 2rem;
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+#gift a {
+    margin: 2rem;
+    font-size: 2.6rem;
+    text-decoration: none;
+}
+
+#gift a button {
+    padding: 0.8rem;
+    width: 15rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(10,102,194);
+    color: white;
+    border: rgb(10,102,194) solid 0.1rem;
+    transition: all ease-in-out 0.1s;
+}
+
+#gift a button:hover {
+    cursor: pointer;
+    width: 18rem;
+    padding: 1.2rem;
+    transition: all ease-in-out 0.1s;
+}

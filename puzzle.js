@@ -24,7 +24,8 @@ submitPuzzleButton.addEventListener("click", (e) => {
     e.preventDefault();
     if (validatePuzzle()) {
         document.querySelector("#puzzle h5").style.display = "none";
-        window.location.pathname = "mouse.html";
+        window.location.pathname = "button.html";
+        return
     } else {
         document.querySelector("#puzzle h5").style.display = "block";
     }

@@ -25,10 +25,20 @@ function getFormInputs(intentForm) {
     return checkedArray;
 }
 
+function validateArr(arr, idx) {
+    for(let i=0; i< arr.length; i+=1) {
+        if (i != idx && arr[i] >=1 ) {
+            return false;
+        }
+    }
+
+    return arr[idx] >= 1;
+}
+
 function validateIntent(arr) {
-    if(arr[0][1] >= 1) {
-        if(arr[1][0] >= 1) {
-            if(arr[2][3] >= 1) {
+    if(validateArr(arr[0], 1)) {
+        if(validateArr(arr[1], 0)) {
+            if(validateArr(arr[2], 3)) {
                 return true;
             }
         }
@@ -73,7 +83,6 @@ form1Next.addEventListener("click", (e) => {
         document.querySelector("#intent-form-1").style.display = "none";
         document.querySelector("#intent-form-2").style.display = "block";
         document.querySelector("#intent-form-1 .form-div-1 h5").style.display = "none";
-        console.log(answers)
     } else {
         document.querySelector("#intent-form-1 .form-div-1 h5").style.display = "block";
     }
@@ -88,7 +97,6 @@ form2Next.addEventListener("click", (e) => {
         document.querySelector("#intent-form-2").style.display = "none";
         document.querySelector("#intent-form-3").style.display = "block";
         document.querySelector("#intent-form-2 .form-div-1 h5").style.display = "none";
-        console.log(answers)
     } else {
         document.querySelector("#intent-form-2 .form-div-1 h5").style.display = "block";
     }
@@ -104,10 +112,12 @@ form3Next.addEventListener("click", (e) => {
         if (validateIntent(answers)) {
             console.log(window.location);
             window.location.pathname = "puzzle.html";
+            return;
+        } else {
+            document.querySelector("#intent-form-3").style.display = "none";
+            document.querySelector("#intent-form-4").style.display = "block";
+            document.querySelector("#intent-form-3 .form-div-1 h5").style.display = "none";    
         }
-        document.querySelector("#intent-form-3").style.display = "none";
-        document.querySelector("#intent-form-4").style.display = "block";
-        document.querySelector("#intent-form-3 .form-div-1 h5").style.display = "none";
         console.log(answers)
     } else {
         document.querySelector("#intent-form-3 .form-div-1 h5").style.display = "block";
